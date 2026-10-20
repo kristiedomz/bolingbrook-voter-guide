@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Unbiased, plain-English guide to every race on the Bolingbrook (Will County) ballot for the Nov. 3, 2026 general election.">
+<meta property="og:title" content="Bolingbrook Voter Guide — Nov. 3, 2026">
+<meta property="og:description" content="Every race on the Bolingbrook ballot in plain English. No endorsements. Who they are, what they've done, and the one real difference between them.">
+<meta property="og:type" content="website">
+<style>html{color-scheme:light}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Bolingbrook Voter Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+/* Layout: a fixed left rail (the ballot order) beside a single reading column; on phones the rail becomes a sticky "Find your race" bar. */
+:root {
+  --bg:#fbfaf7; --paper:#ffffff; --ink:#1d2433; --muted:#5b6473; --rule:#dcd9d0;
+  --accent:#1f4e9c; --accent-soft:#e8eef9;
+  --red:#d2403a; --yellow:#e0a71a; --green:#2f9a55;
+  --display:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --body:"Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg:#15181f; --paper:#1c2029; --ink:#e8e9ec; --muted:#a2a8b4; --rule:#343a46;
+  --accent:#8fb3ef; --accent-soft:#23304a; --red:#ef6b64; --yellow:#f0bf4a; --green:#5cc47f; color-scheme:dark; } }
+:root[data-theme="dark"] {
+  --bg:#15181f; --paper:#1c2029; --ink:#e8e9ec; --muted:#a2a8b4; --rule:#343a46;
+  --accent:#8fb3ef; --accent-soft:#23304a; --red:#ef6b64; --yellow:#f0bf4a; --green:#5cc47f; color-scheme:dark; }
+
+html { scroll-behavior:smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
+body { background:var(--bg); color:var(--ink); font-family:var(--body); font-size:17px; line-height:1.5;
+  padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); padding-block:0; }
+a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:2px; }
+a:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+
+.wrap { max-width:1180px; margin:0 auto; display:grid; grid-template-columns:280px minmax(0,1fr); gap:48px; align-items:start; }
+header.top { grid-column:1 / -1; padding-block:36px 8px; border-bottom:1px solid var(--rule); }
+header.top h1 { font-family:var(--display); font-weight:700; font-size:clamp(28px, 4vw, 42px); line-height:1.1; margin:0 0 10px; text-wrap:balance; }
+header.top p { margin:0; max-width:68ch; color:var(--muted); }
+header.top .meta { font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:8px; }
+
+nav.rail { position:sticky; top:env(safe-area-inset-top, 0px); max-height:100vh; overflow-y:auto; padding-block:20px 32px; }
+nav.rail ul { list-style:none; margin:0; padding:0; }
+nav.rail li.label { font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:16px 0 6px; padding-left:10px; }
+nav.rail a { display:flex; gap:10px; align-items:baseline; padding:6px 10px; border-radius:6px; color:var(--ink); text-decoration:none; font-size:15px; line-height:1.3; }
+nav.rail li.extra a { color:var(--accent); font-weight:600; }
+nav.rail a:hover { background:var(--accent-soft); }
+nav.rail a.active { background:var(--accent-soft); color:var(--accent); font-weight:600; }
+nav.rail .n { flex:none; width:1.6em; font-variant-numeric:tabular-nums; color:var(--muted); font-size:13px; }
+
+details.mobile { display:none; }
+
+main { min-width:0; padding-block:8px 80px; }
+main h2 { font-family:var(--display); font-weight:700; font-size:26px; line-height:1.2; margin:52px 0 10px; padding-top:18px; border-top:3px solid var(--ink); text-wrap:balance; scroll-margin-top:12px; }
+main h3 { font-family:var(--display); font-weight:600; font-size:22px; line-height:1.25; margin:40px 0 6px; display:flex; gap:10px; align-items:center; text-wrap:balance; scroll-margin-top:12px; }
+main h3 + p { color:var(--muted); margin-top:0; }
+main p, main li { max-width:72ch; }
+main ul, main ol { padding-left:1.3em; }
+main li { margin:4px 0; }
+.dot { display:inline-block; width:.8em; height:.8em; border-radius:50%; flex:none; vertical-align:-0.05em; margin-right:.15em; }
+.dot.red { background:var(--red); } .dot.yellow { background:var(--yellow); } .dot.green { background:var(--green); }
+
+.tbl { overflow-x:auto; margin:14px 0 16px; border:1px solid var(--rule); border-radius:8px; background:var(--paper); }
+table { border-collapse:collapse; width:100%; font-size:15.5px; }
+th, td { text-align:left; vertical-align:top; padding:10px 12px; border-bottom:1px solid var(--rule); }
+th { font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:600; background:var(--accent-soft); }
+tr:last-child td { border-bottom:0; }
+td:first-child { font-weight:600; min-width:150px; }
+
+main p strong:first-child { color:var(--ink); }
+main p em:first-child { color:var(--muted); }
+
+@media (max-width: 900px) {
+  .wrap { grid-template-columns:minmax(0,1fr); gap:0; }
+  nav.rail { display:none; }
+  details.mobile { display:block; position:sticky; top:env(safe-area-inset-top, 0px); z-index:5; background:var(--paper); border:1px solid var(--rule); border-radius:10px; margin:14px 0 8px; }
+  details.mobile summary { cursor:pointer; padding:12px 14px; font-weight:700; color:var(--accent); list-style:none; display:flex; justify-content:space-between; align-items:center; }
+  details.mobile summary::-webkit-details-marker { display:none; }
+  details.mobile summary::after { content:"▾"; }
+  details.mobile[open] summary::after { content:"▴"; }
+  details.mobile ul { list-style:none; margin:0; padding:4px 8px 10px; max-height:60vh; overflow-y:auto; }
+  details.mobile li.label { font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:10px 0 4px; padding-left:8px; }
+  details.mobile a { display:flex; gap:10px; padding:8px; border-radius:6px; color:var(--ink); text-decoration:none; font-size:15px; }
+  details.mobile li.extra a { color:var(--accent); font-weight:600; }
+  details.mobile .n { flex:none; width:1.6em; color:var(--muted); font-size:13px; font-variant-numeric:tabular-nums; }
+  main h2 { scroll-margin-top:64px; } main h3 { scroll-margin-top:64px; }
+  body { font-size:16px; }
+  header.top { padding-block:24px 6px; }
+}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="meta">Will County · DuPage Township · General Election · Tuesday, Nov. 3, 2026</div>
+    <h1>Bolingbrook Voter Guide</h1>
+    <p>Every race on the Bolingbrook ballot, in plain English. No endorsements. For each race: what the job is, who's running, what they've done, and the one real difference between them.</p>
+  </header>
+
+  <nav class="rail" aria-label="Races on the ballot">
+    <ul>
+<li class="extra"><a href="#how-to-vote">How to vote</a></li>
+<li class="extra"><a href="#should-i-just-vote-my-party">Should I just vote my party?</a></li>
+<li class="label">On the ballot, in order</li>
+<li><a href="#us-senator"><span class="n">1</span>U.S. Senator</a></li>
+<li><a href="#governor-and-lieutenant-governor"><span class="n">2</span>Governor and Lieutenant Governor</a></li>
+<li><a href="#attorney-general"><span class="n">3</span>Attorney General</a></li>
+<li><a href="#secretary-of-state"><span class="n">4</span>Secretary of State</a></li>
+<li><a href="#comptroller"><span class="n">5</span>Comptroller</a></li>
+<li><a href="#treasurer"><span class="n">6</span>Treasurer</a></li>
+<li><a href="#representative-in-congress-11th-district"><span class="n">7</span>Representative in Congress, 11th District</a></li>
+<li><a href="#representative-in-the-general-assembly-98th-district"><span class="n">8</span>Representative in the General Assembly, 98th District</a></li>
+<li><a href="#county-clerk"><span class="n">9</span>County Clerk</a></li>
+<li><a href="#county-sheriff"><span class="n">10</span>County Sheriff</a></li>
+<li><a href="#county-treasurer"><span class="n">11</span>County Treasurer</a></li>
+<li><a href="#regional-superintendent-of-schools"><span class="n">12</span>Regional Superintendent of Schools</a></li>
+<li><a href="#county-board-member-district-11-vote-for-up-to-two"><span class="n">13</span>County Board Member, District 11</a></li>
+<li><a href="#judge-of-the-appellate-court-third-district"><span class="n">14</span>Judge of the Appellate Court, Third District</a></li>
+<li><a href="#judge-of-the-circuit-court-12th-circuit-1st-subcircuit"><span class="n">15</span>Judge of the Circuit Court, 12th Circuit, 1st Subcircuit</a></li>
+<li><a href="#judicial-retention-yes-or-no-on-each"><span class="n">16</span>Judicial Retention — 4 judges, yes/no</a></li>
+<li><a href="#dupage-township-referendum-right-to-boycott"><span class="n">17</span>DuPage Township Referendum — Right to Boycott</a></li>
+<li class="extra"><a href="#about-this-guide">About this guide</a></li>
+<li class="extra"><a href="#sources-and-how-this-was-built">Sources</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <details class="mobile">
+      <summary>Find your race</summary>
+      <ul>
+<li class="extra"><a href="#how-to-vote">How to vote</a></li>
+<li class="extra"><a href="#should-i-just-vote-my-party">Should I just vote my party?</a></li>
+<li class="label">On the ballot, in order</li>
+<li><a href="#us-senator"><span class="n">1</span>U.S. Senator</a></li>
+<li><a href="#governor-and-lieutenant-governor"><span class="n">2</span>Governor and Lieutenant Governor</a></li>
+<li><a href="#attorney-general"><span class="n">3</span>Attorney General</a></li>
+<li><a href="#secretary-of-state"><span class="n">4</span>Secretary of State</a></li>
+<li><a href="#comptroller"><span class="n">5</span>Comptroller</a></li>
+<li><a href="#treasurer"><span class="n">6</span>Treasurer</a></li>
+<li><a href="#representative-in-congress-11th-district"><span class="n">7</span>Representative in Congress, 11th District</a></li>
+<li><a href="#representative-in-the-general-assembly-98th-district"><span class="n">8</span>Representative in the General Assembly, 98th District</a></li>
+<li><a href="#county-clerk"><span class="n">9</span>County Clerk</a></li>
+<li><a href="#county-sheriff"><span class="n">10</span>County Sheriff</a></li>
+<li><a href="#county-treasurer"><span class="n">11</span>County Treasurer</a></li>
+<li><a href="#regional-superintendent-of-schools"><span class="n">12</span>Regional Superintendent of Schools</a></li>
+<li><a href="#county-board-member-district-11-vote-for-up-to-two"><span class="n">13</span>County Board Member, District 11</a></li>
+<li><a href="#judge-of-the-appellate-court-third-district"><span class="n">14</span>Judge of the Appellate Court, Third District</a></li>
+<li><a href="#judge-of-the-circuit-court-12th-circuit-1st-subcircuit"><span class="n">15</span>Judge of the Circuit Court, 12th Circuit, 1st Subcircuit</a></li>
+<li><a href="#judicial-retention-yes-or-no-on-each"><span class="n">16</span>Judicial Retention — 4 judges, yes/no</a></li>
+<li><a href="#dupage-township-referendum-right-to-boycott"><span class="n">17</span>DuPage Township Referendum — Right to Boycott</a></li>
+<li class="extra"><a href="#about-this-guide">About this guide</a></li>
+<li class="extra"><a href="#sources-and-how-this-was-built">Sources</a></li>
+      </ul>
+    </details>
+<h2 id="how-to-vote">How to vote</h2>
+<ul>
+<li><strong>Election Day:</strong> Tuesday, Nov. 3, polls open 6 a.m.–7 p.m. If you're in line at 7, you can still vote.</li>
+<li><strong>Early voting in Bolingbrook:</strong> Fountaindale Public Library, 300 W. Briarcliff Rd. Hours at <a href="https://www.willcountyclerk.gov" target="_blank" rel="noopener">willcountyclerk.gov</a>.</li>
+<li><strong>Mail ballot:</strong> request by Oct. 29; drop boxes include the Fountaindale Library lobby.</li>
+<li><strong>Your exact ballot, polling place, registration status:</strong> <a href="https://www.willcountyclerk.gov" target="_blank" rel="noopener">willcountyclerk.gov</a>. Statewide lookup: <a href="https://elections.il.gov" target="_blank" rel="noopener">elections.il.gov</a>.</li>
+<li><strong>Same-day registration</strong> is available at early-voting sites and on Election Day — bring two IDs, one showing your address.</li>
+<li><strong>Candidate Q&amp;A in their own words:</strong> <a href="https://www.vote411.org" target="_blank" rel="noopener">vote411.org</a> (League of Women Voters), <a href="https://www.ballotready.org" target="_blank" rel="noopener">ballotready.org</a>. Many local candidates don't fill these out — that's why this guide exists.</li>
+</ul>
+<h2 id="should-i-just-vote-my-party">Should I just vote my party?</h2>
+<p>It depends on the race. Every race below is tagged with one of these:</p>
+<ul>
+<li><span class="dot red"></span> <strong>Party decides a lot</strong> — U.S. Senate, U.S. House, Governor, Attorney General. These seats decide which party holds power or can push back on the president. Most people vote their party here, and that's the system working as designed.</li>
+<li><span class="dot yellow"></span> <strong>Party matters some</strong> — Secretary of State, Comptroller, Treasurer, State Rep, County Board. Real policy differences, but also management jobs.</li>
+<li><span class="dot green"></span> <strong>Mostly about the person</strong> — County Clerk, Sheriff, County Treasurer, Regional Superintendent, all judges. Running elections, collecting taxes and running the jail don't touch national politics. Experience and track record tell you more than party.</li>
+</ul>
+<p>One reasonable approach: vote party on the red races, then read the green ones on their own terms.</p>
+<h2 id="us-senate-governor-attorney-general">U.S. Senate, Governor, Attorney General</h2>
+<h3 id="us-senator"><span class="dot red"></span> U.S. Senator</h3>
+<p>One of Illinois' two votes in the U.S. Senate for six years. Open seat; Dick Durbin is retiring.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Who they are</th>
+<th>What they say they'll do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.axios.com/local/chicago/2026/10/07/illinois-u-s-senate-election-stratton-vs-tracy-voter-guide" target="_blank" rel="noopener">Juliana Stratton</a> (D)</td>
+<td>Lt. Governor since 2019</td>
+<td>Medicare for All, abortion rights, assault-weapons ban, oppose the Trump agenda</td>
+</tr>
+<tr>
+<td><a href="https://www.axios.com/local/chicago/2026/10/07/illinois-u-s-senate-election-stratton-vs-tracy-voter-guide" target="_blank" rel="noopener">Don Tracy</a> (R)</td>
+<td>Springfield attorney; ex-chair of the Illinois GOP</td>
+<td>Border enforcement, less regulation, gun rights; abortion left to the states</td>
+</tr>
+<tr>
+<td>Whitfield Harrington Jr. (American Center Party)</td>
+<td>No public info found</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The real difference:</strong> Stratton would be a reliable vote with Democrats and against the Trump administration. Tracy would mostly back Republican priorities (border enforcement, less regulation) but says he won't be a "rubber stamp." This race comes down to which party you want controlling the Senate.</p>
+<h3 id="governor-and-lieutenant-governor"><span class="dot red"></span> Governor and Lieutenant Governor</h3>
+<p>Runs state government, signs or vetoes every state law. Vote for one ticket.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Ticket</th>
+<th>Who they are</th>
+<th>What they say they'll do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://chicago.suntimes.com/elections/2026/10/01/what-to-know-llinois-governor-race-jb-pritzker-darren-bailey-collin-corbett" target="_blank" rel="noopener">JB Pritzker / Christian Mitchell</a> (D, incumbent)</td>
+<td>Governor since 2019; Hyatt heir</td>
+<td>Stay the course; keep fighting the Trump administration</td>
+</tr>
+<tr>
+<td><a href="https://chicago.suntimes.com/elections/2026/10/01/what-to-know-llinois-governor-race-jb-pritzker-darren-bailey-collin-corbett" target="_blank" rel="noopener">Darren Bailey / Aaron Del Mar</a> (R)</td>
+<td>Downstate farmer, ex-state senator; lost to Pritzker in 2022; Trump-endorsed</td>
+<td>Conservative turn; made his name opposing COVID rules</td>
+</tr>
+<tr>
+<td><a href="https://chicago.suntimes.com/elections/2026/10/01/what-to-know-llinois-governor-race-jb-pritzker-darren-bailey-collin-corbett" target="_blank" rel="noopener">Collin Corbett / Carolyn Schofield</a> (Independent)</td>
+<td>Ex-Republican consultant; petitioned onto the ballot</td>
+<td>A middle option: fiscally conservative, supports abortion rights</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The real difference:</strong> Pritzker is four more years of the current direction. Bailey is a sharp conservative turn. Corbett is the option for people who want neither party — he's an ex-Republican who's fiscally conservative but supports abortion rights.</p>
+<p><strong>Pritzker's track record (7 years):</strong> signed the $15 minimum wage and the $45B Rebuild Illinois roads-and-buildings plan (2019); legalized recreational cannabis; Illinois has earned <a href="https://muddyrivernews.com/politics/illinois-gets-ninth-recent-credit-upgrade-as-administration-faces-scrutiny-for-pandemic-unemployment-handling/20231112204456/" target="_blank" rel="noopener">nine credit-rating upgrades</a> since 2021 after years of downgrades; a 2024 pilot erased about $345M of medical debt for 270,000 residents.</p>
+<h3 id="attorney-general"><span class="dot red"></span> Attorney General</h3>
+<p>The state's top lawyer: prosecutes big cases, protects consumers, and decides whether Illinois sues the federal government.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Who they are</th>
+<th>What they say they'll do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.stateside.com/sites/default/files/2026-07/Kwame%20Raoul%20AG%20Profile.pdf" target="_blank" rel="noopener">Kwame Raoul</a> (D, incumbent)</td>
+<td>AG since 2019; 14 years in the state Senate</td>
+<td>Violent crime and retail theft, child-predator cases, lawsuits against the Trump administration</td>
+</tr>
+<tr>
+<td><a href="https://www.stateside.com/sites/default/files/2026-07/Bob%20Fioretti%20AG%20Profile.pdf" target="_blank" rel="noopener">Robert "Bob" Fioretti</a> (R)</td>
+<td>Civil-rights lawyer; ex-Chicago alderman; several unsuccessful runs for other offices</td>
+<td>Corruption, consumer protection, public safety</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The real difference:</strong> Raoul uses the office to challenge the Trump administration in court. Fioretti would stop that and refocus on corruption and consumer cases inside Illinois. If checking federal power matters to you, this race is one of the few below Congress where it shows up directly.</p>
+<p><strong>Raoul's track record (7 years):</strong> published the 2023 <a href="https://www.aljazeera.com/amp/news/2023/5/24/illinois-probe-reveals-rampant-sexual-abuse-in-catholic-church" target="_blank" rel="noopener">Catholic clergy abuse report</a> naming 451 clergy and about 2,000 child survivors; brought Illinois into the $7.4B Purdue/Sackler opioid settlement and a <a href="https://illinoisattorneygeneral.gov/news/story/attorney-general-raoul-secures-720-million-from-eight-opioid-manufacturers" target="_blank" rel="noopener">$720M settlement</a> with eight other manufacturers (2025); 2025 multistate suits helped release $2B in withheld federal disaster aid.</p>
+<h2 id="secretary-of-state-comptroller-treasurer">Secretary of State, Comptroller, Treasurer</h2>
+<h3 id="secretary-of-state"><span class="dot yellow"></span> Secretary of State</h3>
+<p>Runs the DMV, car titles and plates, business filings, and the state library.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Who they are</th>
+<th>What they say they'll do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.shawlocal.com/news/2026/02/02/2026-election-questionnaire-diane-harris-illinois-secretary-of-state/" target="_blank" rel="noopener">Diane M. Harris</a> (R)</td>
+<td>Joliet; retired from ComEd; Joliet Junior College trustee</td>
+<td>Walk-in DMV service in every county; lower fees for seniors and veterans</td>
+</tr>
+<tr>
+<td><a href="https://ballotpedia.org/Alexi_Giannoulias" target="_blank" rel="noopener">Alexi Giannoulias</a> (D, incumbent)</td>
+<td>Secretary of State since 2023; ex-state Treasurer</td>
+<td>Keep moving the DMV online; digital IDs</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The real difference:</strong> Harris wants to bring back walk-in DMV service and cut fees. Giannoulias wants to keep pushing things online. The wrinkle: Giannoulias is also running for Chicago mayor, so if he wins that in February, the governor would appoint his replacement.</p>
+<p><strong>Giannoulias' track record (3 years):</strong> drafted the 2023 law making Illinois the first state to bar library book bans; launched <a href="https://capitolnewsillinois.com/news/as-online-dmv-services-plagued-by-no-shows-secretary-of-state-launches-changes" target="_blank" rel="noopener">Skip-the-Line appointments</a> at 40+ DMVs; mobile driver's licenses in Apple Wallet (Nov 2025).</p>
+<h3 id="comptroller"><span class="dot yellow"></span> Comptroller</h3>
+<p>The state's bill-payer. Writes the checks and reports on whether Illinois can cover them. Open seat; Susana Mendoza is running for Chicago mayor instead.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Who they are</th>
+<th>What they say they'll do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://news.wttw.com/2026/09/29/replacing-mendoza-candidates-vie-be-state-s-first-new-comptroller-decade" target="_blank" rel="noopener">Bryan Drew</a> (R)</td>
+<td>Southern Illinois attorney; former community-college trustee</td>
+<td>Be a watchdog independent of the governor; show where every dollar goes</td>
+</tr>
+<tr>
+<td><a href="https://chicago.suntimes.com/elections/2026/10/01/what-to-know-illinois-comptroller-race-bryan-drew-state-rep-margaret-croke" target="_blank" rel="noopener">Margaret Croke</a> (D)</td>
+<td>Chicago state rep; chairs a House finance committee</td>
+<td>Build state savings, pay pensions in full, keep the credit rating rising</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The real difference:</strong> Drew's pitch is that the bill-payer should be independent of the governor and act as a watchdog. Croke's is that she'll keep executing the finance plan that's been raising the state's credit rating — and she's backed by the governor and has out-raised Drew about 30-to-1. Experience: Drew is a small-town attorney and college trustee; Croke chairs a state House finance committee.</p>
+<h3 id="treasurer"><span class="dot yellow"></span> Treasurer</h3>
+<p>Invests the state's money; runs the Bright Start college savings plan and returns unclaimed property.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Who they are</th>
+<th>What they say they'll do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://news.wttw.com/elections/voters-guide/2026-general/max-solomon" target="_blank" rel="noopener">Max Solomon</a> (R)</td>
+<td>Attorney and college instructor; several prior runs for office</td>
+<td>Cut waste; more transparency</td>
+</tr>
+<tr>
+<td><a href="https://en.wikipedia.org/wiki/Mike_Frerichs" target="_blank" rel="noopener">Michael W. Frerichs</a> (D, incumbent)</td>
+<td>Treasurer since 2015</td>
+<td>Running on his record (below)</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The real difference:</strong> Frerichs is running on 12 years in the job. Solomon is running an anti-waste message with a very small campaign (he got on the ballot as a write-in). There's no big policy split; it's record vs. outsider.</p>
+<p><strong>Frerichs' track record (12 years):</strong> returned more than $2.5B in unclaimed property to 2.5M people; Bright Start college savings plan holds its <a href="https://illinoistreasurer.gov/2025/11/12" target="_blank" rel="noopener">seventh straight Morningstar Gold rating</a>; launched Secure Choice, a retirement plan for private-sector workers whose employers don't offer one (2018).</p>
+<h2 id="congress-and-state-representative">Congress and State Representative</h2>
+<h3 id="representative-in-congress-11th-district"><span class="dot red"></span> Representative in Congress, 11th District</h3>
+<p>Our seat in the U.S. House, two-year term. The district runs from Naperville and Bolingbrook west through Kane and McHenry counties.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Who they are</th>
+<th>What they say they'll do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.dailyherald.com/20260227/us-congress-politics/jeff-walter-2026-candidate-for-11th-congressional-district/" target="_blank" rel="noopener">Jeff Walter</a> (R)</td>
+<td>Mayor of Elburn; retired Navy Master Chief; IT executive</td>
+<td>Spending caps, border enforcement, term limits, more health-plan choices</td>
+</tr>
+<tr>
+<td><a href="https://napertoday.com/articles/bill-foster-seeks-reelection-to-illinois-11th-congressional-seat-mv1haatu" target="_blank" rel="noopener">Bill Foster</a> (D, incumbent)</td>
+<td>In Congress since 2013; Fermilab physicist</td>
+<td>Public health-insurance option, lower drug prices, tighter gun laws, abortion rights</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The real difference:</strong> A straight party contrast. Foster (14-year incumbent, scientist) wants a government health-insurance option, tighter gun laws and abortion rights written into law. Walter (small-town mayor, Navy veteran) wants spending caps, tougher border enforcement and term limits. Like the Senate, this seat helps decide which party controls Congress.</p>
+<p><strong>Foster's track record (14 years):</strong> brought home <a href="https://foster.house.gov/media/press-releases/foster-delivers-over-163-million-11th-district-community-project-funding" target="_blank" rel="noopener">$16.4M in federal project money</a> for 14 district projects this year, including $850K for the Weber Road corridor in Will County; his office reports resolving 751 constituent cases and recovering $3.45M for constituents in 2025.</p>
+<h3 id="representative-in-the-general-assembly-98th-district"><span class="dot yellow"></span> Representative in the General Assembly, 98th District</h3>
+<p>Our seat in the state legislature in Springfield. Covers Joliet, Crest Hill and part of Bolingbrook/Romeoville.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Who they are</th>
+<th>What they say they'll do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.shawlocal.com/news/election/2026/09/22/2026-election-questionnaire-nona-parker-illinois-state-representative-98th-district/" target="_blank" rel="noopener">Nona Parker</a> (R)</td>
+<td>Joliet pastor; former CITGO accountant; first run</td>
+<td>Cap property taxes, school choice, undo bail reform</td>
+</tr>
+<tr>
+<td><a href="https://ballotpedia.org/Natalie_Manley" target="_blank" rel="noopener">Natalie A. Manley</a> (D, incumbent)</td>
+<td>Joliet CPA; state rep since 2013</td>
+<td>Workers' rights, health-care access (filed no 2026 questionnaire)</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The real difference:</strong> Parker is a newcomer running on lower property taxes, school choice and undoing bail reform. Manley is a 13-year incumbent and CPA whose recent work has been on workers' rights and health-care access. Democrats hold a large majority in Springfield, so one seat won't change who's in charge, but it adds or subtracts a vote on those issues.</p>
+<p><strong>Manley's track record (13 years):</strong> five of her bills became law in 2025 alone — AEDs required at health facilities, CPR coaching by 911 dispatchers, dementia screening, and workplace-violence protections for health-care workers (<a href="https://www.ilga.gov/house/members/details/3302" target="_blank" rel="noopener">full list</a>); named Deputy Majority Leader in 2023.</p>
+<h2 id="will-county-clerk-sheriff-treasurer-regional-superintendent">Will County: Clerk, Sheriff, Treasurer, Regional Superintendent</h2>
+<h3 id="county-clerk"><span class="dot green"></span> County Clerk</h3>
+<p>Runs our elections and keeps birth, death and marriage records. A 2024 rematch; Parker won that one by under 1%.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Who they are</th>
+<th>What they say they'll do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.shawlocal.com/news/election/2026/10/10/2026-election-questionnaire-annette-parker-will-county-clerk/" target="_blank" rel="noopener">Annette Parker</a> (R, incumbent)</td>
+<td>Clerk since 2024; 10 years on the County Board</td>
+<td>Election security; more online services</td>
+</tr>
+<tr>
+<td><a href="https://www.shawlocal.com/news/election/2026/10/09/2026-election-questionnaire-michelle-stiff-will-county-clerk/" target="_blank" rel="noopener">Michelle Stiff</a> (D)</td>
+<td>Joliet high-school board president; ex-county workforce director; ex-teacher</td>
+<td>Voter access and education; modernize the office</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The real difference:</strong> Both say "modernize." It's really a question of who you trust to run elections: Parker has done the job for two years and points to added security measures; Stiff brings school-board and county workforce-office management experience and emphasizes voter access.</p>
+<p><strong>Parker's track record (under 2 years):</strong> ran the April 2025 and March 2026 elections without reported problems; launched <a href="https://www.willcountyclerk.gov/" target="_blank" rel="noopener">online ordering for birth and death records</a> (Sept 2026); expanded mail-ballot drop boxes to 11 and early-voting sites to 24.</p>
+<h3 id="county-sheriff"><span class="dot green"></span> County Sheriff</h3>
+<p>Runs the county jail, patrols unincorporated areas, and handles court security and evictions. (Bolingbrook has its own police department.) Open seat; Sheriff Mike Kelley is retiring after 12 years. Both candidates work in the Sheriff's Office today.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Who they are</th>
+<th>What they say they'll do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.shawlocal.com/news/election/2026/09/19/2026-election-questionnaire-james-reilly-will-county-sheriff/" target="_blank" rel="noopener">James "Jim" Reilly</a> (R)</td>
+<td>Deputy since 2013; 8 years Joliet police; Ph.D.; third run for sheriff</td>
+<td>Bring back cash bail; crime reduction; community policing</td>
+</tr>
+<tr>
+<td><a href="https://www.shawlocal.com/news/election/2026/09/25/2026-election-questionnaire-patrick-jones-will-county-sheriff/" target="_blank" rel="noopener">Patrick Jones</a> (D)</td>
+<td>Sergeant; 25 years in the office (jail, patrol, SWAT, crisis negotiation); first run</td>
+<td>Release body-cam video within 7 days; mental-health checks for deputies; job training in the jail</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The real difference:</strong> Both are career Will County deputies. Reilly is the "tougher on crime" candidate — wants cash bail back, has a Ph.D. and union-leadership background, and this is his third try. Jones is the "reform from inside" candidate — release body-cam video fast, mental-health checks for deputies, job training in the jail. The clearest policy split is bail.</p>
+<h3 id="county-treasurer"><span class="dot green"></span> County Treasurer</h3>
+<p>Sends your property tax bill, collects the money, and invests it until it's paid out to schools and towns. Does not set tax rates.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Who they are</th>
+<th>What they say they'll do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ballotpedia.org/Carmen_Maurella_III_(Will_County_Treasurer,_Illinois,_candidate_2026)" target="_blank" rel="noopener">Carmen Maurella III</a> (R)</td>
+<td>Homer Township assessor; teaches accounting</td>
+<td>Fiscal responsibility (filed no questionnaire)</td>
+</tr>
+<tr>
+<td><a href="https://www.shawlocal.com/news/election/2026/10/02/2026-election-questionnaire-tim-brophy-will-county-treasurer/" target="_blank" rel="noopener">Tim Brophy</a> (D, incumbent)</td>
+<td>Treasurer since 2018; banking career; ex-Joliet council</td>
+<td>Low office costs, better investment returns, on-time tax bills</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The real difference:</strong> No policy split — it's about who you trust with the money. Brophy has done the job for eight years and comes from banking. Maurella is a township assessor who teaches accounting. Brophy's side points to his record; Maurella's side has pointed to a 2012 business bankruptcy Brophy says involved no personal debt.</p>
+<p><strong>Brophy's track record (8 years):</strong> set up alternate payment deadlines during COVID and a <a href="https://willcounty.gov/will-county-treasurer-brophy-announces-new-deadlinesprocedures-for-paying-property-taxes" target="_blank" rel="noopener">four-installment option</a> in 2021; runs a payment-reminder service and senior tax-deferral program.</p>
+<h3 id="regional-superintendent-of-schools"><span class="dot green"></span> Regional Superintendent of Schools</h3>
+<p>Runs the county education office: teacher licensing, truancy, alternative programs for struggling students, school-safety coordination. Does not run Valley View or any local district.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Who they are</th>
+<th>What they say they'll do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.shawlocal.com/news/election/2026/10/11/2026-election-questionnaire-elizabeth-caparelli-ruff-will-county-regional-superintendent-of-schools/" target="_blank" rel="noopener">Elizabeth Caparelli-Ruff</a> (R, incumbent)</td>
+<td>In the job since 2022; Ed.D.</td>
+<td>School safety, truancy, careful spending</td>
+</tr>
+<tr>
+<td><a href="https://www.shawlocal.com/news/election/2026/09/30/2026-election-questionnaire-theresa-rouse-will-county-regional-superintendent-of-schools/" target="_blank" rel="noopener">Theresa Rouse</a> (D)</td>
+<td>Superintendent of Joliet's elementary district; Ed.D.</td>
+<td>Turn the office into a support hub for local districts</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The real difference:</strong> Both are educators with doctorates. Caparelli-Ruff has held this exact job for four years and emphasizes safety and truancy. Rouse currently runs Joliet's elementary district (the county's largest) and wants the office to do more to support local districts. Experience in the role vs. experience running schools.</p>
+<p><strong>Caparelli-Ruff's track record (4 years):</strong> got county funding to put <a href="https://shawlocal.com/the-herald-news/2025/03/18/will-county-fortifying-entrances-of-all-county-high-schools" target="_blank" rel="noopener">bullet-resistant film on the entrances of all 21 Will County high schools</a> (2025), with younger grades planned next; launched a student-success program for kids struggling with attendance; added a kitchen at the county's alternative school.</p>
+<h2 id="county-board">County Board</h2>
+<h3 id="county-board-member-district-11-vote-for-up-to-two"><span class="dot yellow"></span> County Board Member, District 11 — vote for up to two</h3>
+<p>The County Board sets the county budget and property-tax levy, approves zoning and road projects, and oversees the Health Department and Forest Preserve. It has party caucuses, so party matters some. Three candidates for two seats. Only one Republican filed, so at least one Democrat wins.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Who they are</th>
+<th>What they say they'll do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steven Smith (R)</td>
+<td>Nothing public found — no site, bio, or news coverage</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="https://www.shawlocal.com/the-herald-news/2026/02/01/2026-election-questionnaire-sheldon-watts-will-county-board-district-11/" target="_blank" rel="noopener">Sheldon L. Watts</a> (D)</td>
+<td>Ex-Bolingbrook village trustee; telecom career</td>
+<td>Efficient, accountable county government; youth programs</td>
+</tr>
+<tr>
+<td><a href="https://ballotpedia.org/Jacqueline_L._Traynere_(Will_County_Board_District_11,_Illinois,_candidate_2026)" target="_blank" rel="noopener">Jacqueline L. Traynere</a> (D, incumbent)</td>
+<td>On the board since 2008; Democratic caucus leader</td>
+<td>Affordable and senior housing; working-family programs</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Of note:</em> In March 2026 a judge <a href="https://www.shawlocal.com/the-herald-news/2026/03/09/will-county-board-member-found-guilty-of-two-counts-of-computer-tampering/" target="_blank" rel="noopener">found Traynere guilty</a> of two misdemeanor counts of computer tampering for accessing a Republican board member's county email without permission in 2024; she received <a href="https://www.shawlocal.com/the-herald-news/2026/04/07/will-county-board-member-sentenced-to-court-supervision-in-computer-tampering-case/" target="_blank" rel="noopener">three months' court supervision</a>. She has said she was testing a shared-password security flaw. Board Republicans called for her resignation; she remains on the board and the ballot.</p>
+<p><strong>The real difference:</strong> Watts is the fresh face with village-government experience. Traynere is the 18-year veteran who leads the Democratic caucus but carries a 2026 misdemeanor conviction. Smith is a blank — nobody could find anything about him. You can vote for any two, or just one.</p>
+<p><strong>Traynere's track record (18 years):</strong> voted for the county's 4-cent gas tax, which she says brings in $12M+ a year for roads; cites breaking big construction contracts into smaller pieces so minority-owned firms can bid, and Narcan training for first responders (<a href="https://shawlocal.com/news/election/2022/05/02/jackie-traynere-will-county-board-2022-primary-election-questionnaire" target="_blank" rel="noopener">her 2022 questionnaire</a>). Elected Democratic caucus leader by her colleagues.</p>
+<h2 id="judges-contested-seats">Judges — contested seats</h2>
+<p><span class="dot green"></span> Judges have a party label on the ballot but aren't supposed to act on it. The most useful signal is what lawyers who've appeared in front of them say — that's the rating column.</p>
+<p><strong>How to read the "Lawyers' grade" column:</strong> the state and county bar associations survey local attorneys — the people who actually argue cases in front of these candidates — on whether each one is up to the job. "Recommended" means at least 60% said yes; the number is the share who said yes. Think of it as a performance review by coworkers. <a href="https://www.isba.org/judicial-elections/counties/will" target="_blank" rel="noopener">Full results</a>.</p>
+<h3 id="judge-of-the-appellate-court-third-district"><span class="dot green"></span> Judge of the Appellate Court, Third District</h3>
+<p>Hears appeals from 21 counties including Will. Filling the McDade vacancy.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Who they are</th>
+<th>Lawyers' grade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ballotpedia.org/Jason_Helland" target="_blank" rel="noopener">Jason A. Helland</a> (R)</td>
+<td>Trial judge in LaSalle County; 10 years as Grundy County's top prosecutor</td>
+<td>Recommended, 62%</td>
+</tr>
+<tr>
+<td><a href="https://www.judgeoconnell.com/qualifications" target="_blank" rel="noopener">Margaret "Peggy" O'Connell</a> (D)</td>
+<td>DuPage County trial judge; runs its felony courts</td>
+<td>Recommended, 74%</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The real difference:</strong> Both are sitting trial judges and both are rated Recommended, but O'Connell scored notably higher with lawyers (74% vs. 62%). Helland comes from the prosecutor side (10 years as a county state's attorney); O'Connell has done prosecution, defense and family law and now runs DuPage's felony courts.</p>
+<h3 id="judge-of-the-circuit-court-12th-circuit-1st-subcircuit"><span class="dot green"></span> Judge of the Circuit Court, 12th Circuit, 1st Subcircuit</h3>
+<p>Will County trial court. Filling the Carlson vacancy.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Who they are</th>
+<th>Lawyers' grade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.shawlocal.com/news/election/2026/09/29/2026-election-questionnaire-circuit-court-judge-12th-judicial-circuit-candidate-johnpaul-ivec/" target="_blank" rel="noopener">JohnPaul Ivec</a> (R)</td>
+<td>Plainfield-area defense attorney, 30+ years; started as a prosecutor</td>
+<td>Recommended, 65%</td>
+</tr>
+<tr>
+<td><a href="https://www.shawlocal.com/news/election/2026/09/28/2026-election-questionnaire-amy-christiansen-circuit-court-judge-12th-judicial-circuit-subcircuit-1/" target="_blank" rel="noopener">Amy Christiansen</a> (D)</td>
+<td>Already sitting in this seat (appointed 2024); 19 years as a public defender</td>
+<td>Recommended, 92%</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The real difference:</strong> Christiansen is already sitting in this seat (appointed in 2024) and has one of the highest lawyer ratings in the county (92%). Ivec is a longtime Plainfield-area defense attorney rated 65%. Her background is public defender; his is private defense after a start as a prosecutor.</p>
+<h2 id="judicial-retention-yes-or-no-on-each">Judicial retention — yes or no on each</h2>
+<p><strong>What this is:</strong> Every six years a sitting judge has to ask voters, "Can I keep my job?" There's no opponent — you vote yes or no on each one. A judge stays if at least 60% say yes.</p>
+<p><strong>How to decide when you've never seen them in court:</strong> use the lawyers' survey. The Illinois State Bar Association and Will County Bar Association ask local attorneys to grade each judge on integrity, legal ability, and temperament (how they treat people in their courtroom). It's a performance review by the people who work with them every day. "Recommended" means at least 60% of lawyers said the judge is doing an acceptable job. All four passed.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Judge</th>
+<th>Judge since</th>
+<th>What they hear</th>
+<th>Lawyers' grade (% yes)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ballotpedia.org/Amy_Bertani-Tomczak" target="_blank" rel="noopener">Amy M. Bertani-Tomczak</a></td>
+<td>1994</td>
+<td>Felony cases</td>
+<td>87%</td>
+</tr>
+<tr>
+<td><a href="https://ballotpedia.org/Sarah_Jones_(Illinois)" target="_blank" rel="noopener">Sarah Jones</a></td>
+<td>2007</td>
+<td>Felony cases</td>
+<td>70% — lowest of the four; temperament score 56%</td>
+</tr>
+<tr>
+<td><a href="https://ballotpedia.org/Daniel_L._Kennedy" target="_blank" rel="noopener">Daniel L. Kennedy</a></td>
+<td>2014</td>
+<td>Chief Judge — runs the whole county court system</td>
+<td>90%</td>
+</tr>
+<tr>
+<td><a href="https://ballotpedia.org/Daniel_Rippy" target="_blank" rel="noopener">Daniel D. Rippy</a></td>
+<td>2014</td>
+<td>Felony cases</td>
+<td>85%</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Bottom line:</strong> Most voters who don't know the judges vote yes on anyone rated Recommended and save "no" for a judge with a failing grade or a known scandal. None of these four has either. The one soft spot is Judge Jones' temperament score — still a pass overall.</p>
+<p><strong>Kennedy as Chief Judge (since 2021):</strong> restarted jury trials in April 2021 to work down the COVID backlog; allowed cell phones in the courthouse; made Zoom hearings a permanent option. Fellow judges have <a href="https://shawlocal.com/the-herald-news/2024/12/02/kennedy-gets-another-term-as-will-county-chief-judge" target="_blank" rel="noopener">re-elected him chief</a> twice.</p>
+<h2 id="dupage-township-referendum-right-to-boycott">DuPage Township referendum — "Right to Boycott"</h2>
+<p><span class="dot green"></span> No party label. This is an opinion poll, not a law.</p>
+<p><strong>Ballot text:</strong> "Shall individuals and businesses be allowed to boycott and divest from the State of Israel?"</p>
+<p><strong>In plain English:</strong> this is an opinion poll. Your vote changes nothing by itself. Here's the story in four steps:</p>
+<ol>
+<li>Illinois has a law from 2015. It says the state's retirement funds (the money saved up for teachers' and state workers' pensions) can't own stock in any company that refuses to do business with Israel.</li>
+<li>Some people want that law gone. They say the state shouldn't punish a company for a political choice.</li>
+<li>They couldn't get a vote on it in Springfield, so they collected signatures to put this question on local ballots around Illinois, to show lawmakers that voters agree with them. That's how it landed on ours.</li>
+<li>The township itself has nothing to do with Israel and can't do anything either way.</li>
+</ol>
+<p><strong>So your vote means:</strong></p>
+<ul>
+<li><strong>YES</strong> = "Get rid of that law. Let companies boycott Israel without the state selling their stock."</li>
+<li><strong>NO</strong> = "Keep the law. The state shouldn't own stock in companies that boycott Israel."</li>
+<li><strong>Blank</strong> = no opinion. Skipping it doesn't affect anything else on your ballot.</li>
+</ul>
+<p><em>Fine print:</em> the law only covers pension investments — it doesn't stop you personally from boycotting anything. <a href="https://cgfa.ilga.gov/Upload/104HB2723.pdf" target="_blank" rel="noopener">31 companies</a> are on the state's list for this reason today; the best-known was Unilever (Ben &amp; Jerry's) in 2021.</p>
+<h2 id="about-this-guide">About this guide</h2>
+<p>I'm a Bolingbrook resident, not a journalist or a campaign. I put this together because every election I open my mail-in ballot, recognize two names, and feel stuck — and the sites that are supposed to help are mostly blank for local races. I used Claude (an AI assistant) to do the research and the first draft, then read, questioned and edited every section myself. Every candidate got the same treatment, and every fact links to where it came from. It's meant to be unbiased; if you think something tilts one way, say so and I'll fix it.</p>
+<p>The hope is simple: that this gives you enough to feel okay filling in every line — and that the mail-in ballot sitting in your pile gets sent back.</p>
+<p>— Kristie</p>
+<h2 id="sources-and-how-this-was-built">Sources and how this was built</h2>
+<p>Compiled Oct. 20, 2026 from candidate questionnaires in the <a href="https://www.shawlocal.com/news/election/" target="_blank" rel="noopener">Herald-News / Shaw Local</a>, <a href="https://ballotpedia.org" target="_blank" rel="noopener">Ballotpedia</a>, <a href="https://www.isba.org/judicial-elections/reports/all-results" target="_blank" rel="noopener">ISBA judicial evaluations</a>, <a href="https://news.wttw.com" target="_blank" rel="noopener">WTTW</a>, <a href="https://chicago.suntimes.com" target="_blank" rel="noopener">Chicago Sun-Times</a>, <a href="https://www.axios.com/local/chicago" target="_blank" rel="noopener">Axios Chicago</a>, <a href="https://www.dailyherald.com" target="_blank" rel="noopener">Daily Herald</a>, <a href="https://patch.com/illinois/bolingbrook" target="_blank" rel="noopener">Patch Bolingbrook</a>, <a href="https://thetimesweekly.com" target="_blank" rel="noopener">The Times Weekly</a>, and candidates' own websites (linked on each name). Every candidate got the same treatment: background, stated priorities, and anything well-documented in the news. Where nothing could be found beyond a name and party, the guide says so. Spot an error? Comment on the Facebook post and it'll get fixed.</p>
+<p>Your exact ballot may differ by precinct (this one is DuPage Township Precinct 23). Confirm yours at <a href="https://www.willcountyclerk.gov" target="_blank" rel="noopener">willcountyclerk.gov</a>.</p>
+  </main>
+</div>
+
+<script>
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('nav.rail a'));
+  var byId = {};
+  links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+  var targets = Object.keys(byId).map(function (id) { return document.getElementById(id); }).filter(Boolean);
+  if (!('IntersectionObserver' in window) || !targets.length) return;
+  var current = null;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        if (current) current.classList.remove('active');
+        current = byId[e.target.id]; if (current) current.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px', threshold: 0 });
+  targets.forEach(function (t) { io.observe(t); });
+  // Close the phone menu after a tap
+  var d = document.querySelector('details.mobile');
+  if (d) d.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { d.open = false; }); });
+})();
+</script>
+
+</body>
+</html>
